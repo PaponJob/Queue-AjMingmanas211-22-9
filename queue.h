@@ -5,7 +5,7 @@ class Queue {
   int size;
 
 public:
-  void enqueue(int);
+  void enqueue(int,int);
   int dequeue();
   Queue();
   ~Queue(); // dequeue all
@@ -26,8 +26,8 @@ Queue::~Queue(){
     dequeue();
   
 }
-void Queue::enqueue(int x) {
-  NodePtr new_node = new NODE(x);
+void Queue::enqueue(int x,int y) {
+  NodePtr new_node = new NODE(x,y);
 
  if(size==0){
    headPtr=new_node;
